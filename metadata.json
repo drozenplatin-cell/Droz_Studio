@@ -1,0 +1,6 @@
+{
+  "name": "Droz_Future_Project - Universal Software Creation Platform",
+  "description": "The Universal AI-Powered Software Creation Platform. Build Once. Create Everywhere across Android, iOS, Windows, macOS, Linux, and Web.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+    
+    /* ==========================================================================
+       Android Studio Iguana / Jellyfish / Koala & JetBrains New UI Palette
+       Standard, fatigue-free, non-glare enterprise development environment
+       ========================================================================== */
+
+    /* Core Canvas & Surfaces */
+    --as-bg-base: #1e1f22;          /* Primary editor canvas & main frame */
+    --as-bg-panel: #2b2d30;         /* Sidebars, tool window headers, bottom drawer */
+    --as-bg-rail: #26282b;          /* Vertical activity rail */
+    --as-bg-elevated: #313438;      /* Floating popups, modals, dropdowns */
+    --as-bg-input: #1e1f22;         /* Input boxes, search bars, form fields */
+    --as-bg-hover: rgba(255, 255, 255, 0.06);
+    --as-bg-active: rgba(255, 255, 255, 0.10);
+    --as-bg-selected: #2e436e;      /* JetBrains item selection */
+
+    /* Subtle Hairline Borders */
+    --as-border: #393b40;           /* Standard structural divider */
+    --as-border-light: #43454a;     /* Hovered edges, modal borders */
+    --as-border-focus: #3574f0;     /* Focused input outline */
+
+    /* Signature Accents */
+    --as-accent-blue: #3574f0;      /* Primary action blue */
+    --as-accent-blue-hover: #4582f6;
+    --as-accent-green: #3ddc84;     /* Android green */
+    --as-accent-amber: #e09f3e;     /* Soft warning amber */
+    --as-accent-red: #f25555;       /* Error red */
+
+    /* Harmonized Text Hierarchy */
+    --as-text-primary: #dfe1e5;     /* High clarity text */
+    --as-text-secondary: #bcbec4;   /* Labels, body, code content */
+    --as-text-tertiary: #a9acb3;    /* Metadata, descriptions */
+    --as-text-dimmed: #707278;      /* Line numbers, comments, placeholders */
+
+    /* Aliases for JetBrains classes */
+    --jb-bg-base: var(--as-bg-base);
+    --jb-bg-main: var(--as-bg-base);
+    --jb-bg-panel: var(--as-bg-panel);
+    --jb-bg-panel-header: var(--as-bg-panel);
+    --jb-bg-elevated: var(--as-bg-elevated);
+    --jb-bg-input: var(--as-bg-input);
+    --jb-border: var(--as-border);
+    --jb-border-light: var(--as-border-light);
+    --jb-accent-blue: var(--as-accent-blue);
+    --jb-accent-green: var(--as-accent-green);
+    --jb-accent-amber: var(--as-accent-amber);
+    --jb-accent-red: var(--as-accent-red);
+    --jb-text-primary: var(--as-text-primary);
+    --jb-text-secondary: var(--as-text-secondary);
+    --jb-text-dimmed: var(--as-text-dimmed);
+  }
+
+  /* Darcula Classic Theme */
+  .theme-darcula-classic {
+    --as-bg-base: #2b2b2b;
+    --as-bg-panel: #313335;
+    --as-bg-rail: #282828;
+    --as-bg-elevated: #3c3f41;
+    --as-bg-input: #232525;
+    --as-border: #4e5254;
+    --as-border-light: #5a5d60;
+    --as-text-primary: #a9b7c6;
+    --as-text-secondary: #808080;
+    --as-accent-blue: #4a88c7;
+    --as-accent-green: #629755;
+  }
+
+  /* JetBrains Obsidian High Contrast Theme */
+  .theme-obsidian-contrast {
+    --as-bg-base: #141416;
+    --as-bg-panel: #1c1d20;
+    --as-bg-rail: #111214;
+    --as-bg-elevated: #24262a;
+    --as-bg-input: #101113;
+    --as-border: #33353b;
+    --as-border-light: #42454d;
+    --as-text-primary: #f0f2f5;
+    --as-text-secondary: #c8cbd2;
+    --as-accent-blue: #3b82f6;
+    --as-accent-green: #22c55e;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--as-bg-base);
+    color: var(--as-text-primary);
+    overflow: hidden;
+    user-select: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* ==========================================================================
+   Android Studio / JetBrains Style Scrollbars
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #393b40;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #50535a;
+}
+
+/* ==========================================================================
+   Structural Theme Classes
+   ========================================================================== */
+.ide-panel {
+  background-color: var(--as-bg-panel);
+  border-color: var(--as-border);
+}
+
+.ide-canvas {
+  background-color: var(--as-bg-base);
+}
+
+.ide-border {
+  border-color: var(--as-border);
+}
+
+/* JetBrains Darcula & New UI Syntax Tokens */
+.syn-keyword { color: #cf8e6d; font-weight: 600; }
+.syn-string  { color: #6aab73; }
+.syn-func    { color: #56a8f5; }
+.syn-type    { color: #2aacb8; font-weight: 500; }
+.syn-comment { color: #70747d; font-style: italic; }
+.syn-num     { color: #2aacb8; }
+.syn-anno    { color: #bbb529; }
+.syn-prop    { color: #c77dbb; }
